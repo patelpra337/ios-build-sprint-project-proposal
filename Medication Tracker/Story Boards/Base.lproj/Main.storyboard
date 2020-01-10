@@ -181,7 +181,7 @@
                                 <rect key="frame" x="30" y="108" width="354" height="749"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pCB-pt-T3V">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="460"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="749"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Medication Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D2c-FY-Pnd">
                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="34"/>
@@ -199,8 +199,23 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Additional Info:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="p8J-Zz-f3U">
-                                                <rect key="frame" x="0.0" y="84" width="354" height="376"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jqI-zV-OBA">
+                                                <rect key="frame" x="0.0" y="84" width="354" height="281"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frequency" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iis-IF-ag7">
+                                                        <rect key="frame" x="93.5" y="0.0" width="167.5" height="42"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="twe-Id-9Ym">
+                                                        <rect key="frame" x="17" y="50" width="320" height="231"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    </pickerView>
+                                                </subviews>
+                                            </stackView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Additional Info:  " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="p8J-Zz-f3U">
+                                                <rect key="frame" x="0.0" y="373" width="354" height="376"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -209,24 +224,10 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="p8J-Zz-f3U" secondAttribute="trailing" id="0Lt-zv-l7L"/>
+                                            <constraint firstAttribute="trailing" secondItem="jqI-zV-OBA" secondAttribute="trailing" id="84e-TD-SBh"/>
                                             <constraint firstAttribute="trailing" secondItem="34C-lY-B25" secondAttribute="trailing" id="9JK-dl-yaQ"/>
                                             <constraint firstAttribute="trailing" secondItem="D2c-FY-Pnd" secondAttribute="trailing" id="ctM-de-qPY"/>
                                         </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jqI-zV-OBA">
-                                        <rect key="frame" x="0.0" y="483" width="354" height="266"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frequency" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iis-IF-ag7">
-                                                <rect key="frame" x="93.5" y="0.0" width="167.5" height="42"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="twe-Id-9Ym">
-                                                <rect key="frame" x="17" y="50" width="320" height="216"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                            </pickerView>
-                                        </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -240,7 +241,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Ab-dD-MDN"/>
                     </view>
-                    <navigationItem key="navigationItem" id="LPP-JP-Jrn">
+                    <navigationItem key="navigationItem" title="Add Meds" id="LPP-JP-Jrn">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="PcD-QL-CSA">
                             <connections>
                                 <action selector="saveButtonTapped:" destination="V07-5o-TLZ" id="j0p-Di-XmK"/>
